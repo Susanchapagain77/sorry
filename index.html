@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Please Forgive Me</title>
+<title>Do you love me?</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg1: #ffe1ec;
-    --bg2: #ffd0e0;
-    --bg3: #e9d7ff;
+    --bg1: #ffe9f5;
+    --bg2: #ffd5ee;
+    --bg3: #e8d9ff;
     --ink: #4a1832;
-    --pink: #ff4f8b;
-    --pink-dark: #d6336c;
+    --pink: #ff5aa8;
+    --pink-dark: #d63382;
     --face: #ffd36e;
     --face-shade: #f5b947;
   }
@@ -355,31 +355,31 @@
   </div>
 
   <div class="ask">
-    <h1 id="title" aria-label="I'm sorry, please forgive me">
-      <span class="line">I'm sorry,</span>
-      <span class="line small">please forgive me</span>
+    <h1 id="title" aria-label="Do you love me?">
+      <span class="line">Do you love</span>
+      <span class="line small">me?</span>
     </h1>
   </div>
-  <p class="sub ask" id="sub">Pretty please? 🥺</p>
+  <p class="sub ask" id="sub">Say yes, pretty please? 💖</p>
   <div class="row ask">
     <button id="yes">Yes 💖</button>
     <button id="no" tabindex="-1">No</button>
   </div>
 
   <div class="install">
-    <h2>Installing forgiveness.exe 💾</h2>
+    <h2>Installing love.exe ��</h2>
     <div class="bar"><i id="barFill"></i></div>
     <p class="step" id="step">Starting up...</p>
   </div>
 
   <div class="win">
     <h2>Yaaay! 🎉</h2>
-    <p id="winMsg">I knew you'd forgive me 💕</p>
+    <p id="winMsg">I knew you'd say yes 💕</p>
     <div class="cert">
-      <h3>Official Certificate of Forgiveness</h3>
-      <div class="hand">This certifies that you are the kindest human ever, and that I am <u>officially forgiven</u>.</div>
+      <h3>Official Certificate of Affection</h3>
+      <div class="hand">This certifies that you are my favorite person ever, and that my heart is officially yours.</div>
       <small id="certMeta"></small>
-      <div class="stamp">APPROVED 💖</div>
+      <div class="stamp">LOVE APPROVED 💖</div>
     </div>
     <button id="hug">Send a hug 🤗</button>
   </div>
@@ -505,24 +505,19 @@
     if (buddy.classList.contains('happy')) { buddy.classList.toggle('cool'); say(buddy.classList.contains('cool') ? 'Deal with it 😎' : 'Okay okay 😆'); sfx.pop(); return; }
     anim(buddy, 'spin');
     sfx.giggle();
-    say(rand(['Hehe, that tickles! 🤭', 'Boop! 👉', 'Wheee! 🌀', 'Focus! Click Yes 😤']));
+    say(rand(['Hehe, that tickles! 🤭', 'Boop! 👉', 'Wheee! 🌀', 'Focus! Say yes 😤']));
   });
   setTimeout(() => say('Hi... 👉👈'), 900);
 
   /* ---------- the running NO ---------- */
-  const noTexts = ['No', 'Are you sure?', 'Really?? 😳', 'Think again!', 'Pleeease 🥺', 'Nope 🙅', "Can't catch me!", 'Too slow 😜',
-    "I'll cry 😭", 'Wrong button!', 'Try Yes instead', 'Still no?', 'Nice try 😏', 'Not happening', 'Give up? 💕', 'zoom zoom 🏃'];
-  const subTexts = ['Pretty please? 🥺', 'That button seems shy...', 'Hey! Come back! 😅', "It doesn't want to be clicked", 'Yes is getting bigger 👀',
-    'My heart is breaking 💔', 'I made you cookies 🍪', 'I promise to be better!', 'The No buttons are multiplying?!', "Okay, now you're just playing 😂",
-    "There's only one real answer 💖"];
-  const buddyLines = ['Wait no! 😰', 'Noooo 😭', 'Why tho 🥲', 'My poor heart 💔', 'Sniff... 😢', '*sad noises*', 'I will do the dishes! 🧽',
-    'Breakfast in bed? 🥞', 'I got you flowers 💐', 'Puppy eyes activated 🥺'];
+  const noTexts = ['No', 'Are you sure?', 'Really?? 😳', 'Love me first!', 'Pleeease 😭', 'Nope 🙅', "I can be cute too!", 'Too slow 😜', "I'll wait 😌", 'Wrong button!', 'Try Yes instead', 'Still no?', 'Nice try 😏', 'Not happening', 'Give up? 💞', 'zoom zoom 🏃'];
+  const subTexts = ['Say yes? 💖', 'That button is shy...', 'Hey! Come back! 😅', "It doesn't want to be clicked", 'Yes is looking adorable 👀', 'My heart is racing 💞', 'I made you flowers 🌷', 'I promise to be yours!', 'The No buttons are multiplying?!', "Okay, now you're just teasing 😂", "There's only one real answer 💖"];
+  const buddyLines = ['Wait no! 😰', 'Noooo 😭', 'Why tho 🥲', 'My poor heart 💔', 'Sniff... 😢', '*dramatic gasp*', 'I can serenade you! 🎶', 'I brought dessert 🍰', 'I got you flowers 💐', 'Puppy eyes activated 🥺'];
   let dodges = 0, running = false, done = false, lastFlee = 0, moveTimer, hopeful = false;
 
   function startRunning() {
     if (running) return;
     const r = no.getBoundingClientRect();
-    // leave a ghost so Yes doesn't jump
     const ghost = document.createElement('span');
     ghost.style.cssText = `display:inline-block;width:${r.width}px;height:${r.height}px`;
     no.after(ghost);
@@ -680,8 +675,7 @@
   });
 
   /* ---------- YES 💖 ---------- */
-  const steps = ['Deleting grudges... 🗑️', 'Loading hugs... 🤗', 'Downloading cuddles... 📥', 'Patching up feelings... 🩹',
-    'Ordering pizza for apology... 🍕', 'Removing pouty face... 😤➡️😊', 'Almost there... 💞'];
+  const steps = ['Filling your heart with sparkle... ✨', 'Uploading kisses... 💋', 'Loading hugs... 🤗', 'Downloading cuddles... 📥', 'Patching up the feelings... 🩹', 'Ordering dessert for the date... 🍰', 'Almost there... 💞'];
   function accept() {
     if (done) return;
     done = true;
@@ -727,8 +721,8 @@
     buddy.classList.add('happy');
     $('#winMsg').textContent = dodges > 5
       ? `You chased No ${dodges} times... but you picked YES! 💕`
-      : rand(["I knew you'd forgive me. You're the best! 💕", 'Best decision ever. Hug incoming 🤗', 'Thank you! I owe you ice cream 🍦']);
-    $('#certMeta').textContent = `Issued ${new Date().toLocaleDateString(undefined, { dateStyle: 'long' })} · Valid forever · Non-refundable`;
+      : rand(["I knew you'd say yes. You're my favorite person 💕", 'Best decision ever. Hug incoming 🤗', 'Thank you! I adore you so much 💖']);
+    $('#certMeta').textContent = `Issued ${new Date().toLocaleDateString(undefined, { dateStyle: 'long' })} · Valid forever · With endless love`;
     sfx.fanfare();
     burst(innerWidth / 2, innerHeight / 2);
     setTimeout(() => burst(innerWidth * .2, innerHeight * .35), 250);
